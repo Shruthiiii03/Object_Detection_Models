@@ -1,0 +1,6 @@
+[
+  {"box_2d": [566, 389, 720, 425], "label": "roadside safety pillar"},
+  {"box_2d": [554, 543, 610, 560], "label": "roadside safety pillar"},
+  {"box_2d": [545, 581, 581, 592], "label": "roadside safety pillar"},
+  {"box_2d": [540, 600, 572, 609], "label": "roadside safety pillar"}
+]

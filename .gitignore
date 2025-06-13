@@ -1,0 +1,8 @@
+frames/
+videos/
+sam_api/GroundingDINO/
+training_SLIME_dataset/
+*.mcap
+*.png
+*.jpg
+*.pth

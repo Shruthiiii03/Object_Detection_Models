@@ -1,0 +1,11 @@
+[
+  {"box_2d": [622, 73, 727, 121, 121], "label": "roadside safety pillar"},
+  {"box_2d": [572, 784, 616, 812], "label": "roadside safety pillar"},
+  {"box_2d": [568, 523, 590, 534], "label": "roadside safety pillar"},
+  {"box_2d": [568, 534, 588, 544], "label": "roadside safety pillar"},
+  {"box_2d": [566, 544, 584, 553], "label": "roadside safety pillar"},
+  {"box_2d": [564, 553, 580, 561], "label": "roadside safety pillar"},
+  {"box_2d": [562, 561, 578, 569], "label": "roadside safety pillar"},
+  {"box_2d": [560, 568, 574, 576], "label": "roadside safety pillar"},
+  {"box_2d": [558, 575, 572, 582], "label": "roadside safety pillar"}
+]
