@@ -4,7 +4,6 @@ import json
 import cv2
 import supervision as sv 
 import numpy as np 
-# from segment_anything import sam_model_registry, SamPredictor 
 from groundingdino.util.inference import Model 
 
 # setting up constants
@@ -13,7 +12,6 @@ HOME = os.getcwd()
 
 GROUNDING_DINO_CONFIG_PATH = r"/home/shruthi/mcap_frame_project/sam_api/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
 GROUNDING_DINO_CHECKPOINT_PATH = r"/home/shruthi/mcap_frame_project/sam_api/weights/groundingdino_swint_ogc.pth"
-# SAM_CHECKPOINT_PATH = os.path.join(HOME, "weights", "sam_vit_h_4b8939.pth")
 
 # load models
 grounding_dino_model = Model(
@@ -21,23 +19,6 @@ grounding_dino_model = Model(
     model_checkpoint_path=GROUNDING_DINO_CHECKPOINT_PATH,
     device="cpu"
 )
-
-# sam = sam_model_registry["vit_h"](checkpoint=SAM_CHECKPOINT_PATH).to(device=DEVICE)
-# sam_predictor = SamPredictor(sam)
-
-# os.makedirs(os.path.join(HOME, "sam_predictions"), exist_ok=True)
-
-# segment function
-# def segment(sam_predictor, image, xyxy):
-#     sam_predictor.set_image(image)
-#     result_masks = []
-#     for box in xyxy: 
-#         masks, scores, logits = sam_predictor.predict(
-#             box=box,
-#             multimask_output=True
-#         )
-#         result_masks.append(masks[np.argmax(scores)])
-#     return np.array(result_masks)
 
 # annotation
 CLASSES = [
@@ -54,7 +35,7 @@ output_dir_name = f"dino_temp{BOX_THRESHOLD}_text{TEXT_THRESHOLD}"
 output_dir = os.path.join(HOME, "dino_predictions", output_dir_name)
 os.makedirs(output_dir, exist_ok=True)
 
-    #to give better context 
+#to give better context 
 def enhance_class_name(class_names):
     return [f"all {c}s" for c in class_names]    
 
@@ -74,13 +55,6 @@ for path in image_paths:
     if len(detections.xyxy) == 0:
         print(f"No bollards detected in {[path]}")
         continue
-    
-    # convert to masks 
-    # detections.mask = segment(
-    #     sam_predictor=sam_predictor,
-    #     image=cv2.cvtColor(image, cv2.COLOR_BGR2RGB),
-    #     xyxy=detections.xyxy
-    # )
 
     # annotate & save 
     mask_annotator = sv.MaskAnnotator()
@@ -99,7 +73,7 @@ for path in image_paths:
 
     # save image
     cv2.imwrite(output_img_path, annotated_image)
-    print(f"✅ Saved: {output_img_path}")    
+    print(f"Saved: {output_img_path}")    
 
     # save JSON
     json_data = [

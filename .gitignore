@@ -1,7 +1,9 @@
 frames/
 videos/
-sam_api/GroundingDINO/
+DINO_model/GroundingDINO/
 training_SLIME_dataset/
+DINO_model/sam_predictions/
+gemini_api_imageinput.py
 *.mcap
 *.png
 *.jpg

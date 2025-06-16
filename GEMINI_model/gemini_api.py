@@ -61,8 +61,6 @@ INPUT_FOLDER = "chosen_dataset"
 OUTPUT_FOLDER = "gemini_predictions"
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
-#with open('pillartofind.jpg', 'rb') as f:
-#ref_image_bytes= f.read()
 
 for cfg in configs:
     # loop through configs and save json under there
