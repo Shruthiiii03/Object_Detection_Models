@@ -1,5 +1,3 @@
-# AIzaSyAQhOcA0G4I21CGC2OU7DbY-ssIqz3ebi8
-
 from google import genai
 
 from google.genai import types
@@ -55,7 +53,7 @@ def generate_image(boundingboxes, image_path, save_path):
 
     image.save(save_path)
 
-client = genai.Client(api_key='AIzaSyAQhOcA0G4I21CGC2OU7DbY-ssIqz3ebi8')
+# client = genai.Client(api_key='YOUR KEY')
 IMAGE_MIME_TYPE = 'image/png'
 INPUT_FOLDER = "chosen_dataset"
 OUTPUT_FOLDER = "gemini_predictions"
