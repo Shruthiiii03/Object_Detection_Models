@@ -1,5 +1,3 @@
-# AIzaSyAQhOcA0G4I21CGC2OU7DbY-ssIqz3ebi8
-
 from google import genai
 
 from google.genai import types
@@ -38,7 +36,7 @@ def generate_image(boundingboxes):
     image.save("output_with_boxes.jpg")
     image.show()
 
-client = genai.Client(api_key='AIzaSyAQhOcA0G4I21CGC2OU7DbY-ssIqz3ebi8')
+client = genai.Client(api_key='YOUR KEY')
 IMAGE_MIME_TYPE = 'image/jpeg'
 
 with open('bollard.jpg', 'rb') as f:
